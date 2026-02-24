@@ -1,12 +1,13 @@
 """Critic agent for identifying and verifying statements using search tools."""
 
 from google.adk import Agent
-from google.adk.agents.callback import CallbackContext
+from google.adk.agents.callback_context import CallbackContext
 from google.adk.models import LlmResponse
 from google.adk.tools import google_search
 from google.genai import types
 
 from . import prompt
+
 
 def _render_reference(
     callback_context: CallbackContext,
@@ -50,5 +51,5 @@ critic_agent = Agent(
     name="critic_agent",
     instruction=prompt.CRITIC_PROMPT,
     tools=[google_search],
-    after_model_callback=_render_refernce,
+    after_model_callback=_render_reference,
 )
