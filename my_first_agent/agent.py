@@ -1,4 +1,7 @@
 from google.adk.agents.llm_agent import Agent
+from dotenv import load_dotenv
+
+load_dotenv()
 
 def get_current_time(city: str) -> dict:
   """Returns the current time in the specified city"""
