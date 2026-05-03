@@ -6,3 +6,4 @@ agent.cpython-312.pyc
 .idea
 .csv
 data/
+output/
