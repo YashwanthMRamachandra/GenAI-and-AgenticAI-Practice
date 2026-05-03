@@ -17,10 +17,10 @@ gcloud kms encrypt \
 
 gcloud beta services identity create \
   --service=dlp.googleapis.com \
-  --project=gen-lang-client-0609077635
+  --project=<project-id>
 
 gcloud kms keys add-iam-policy-binding deid-key \
   --location=global \
   --keyring=deid-keyring \
-  --member="serviceAccount:service-627878247446@dlp-api.iam.gserviceaccount.com" \
+  --member="serviceAccount:service-<project_number>@dlp-api.iam.gserviceaccount.com" \
   --role="roles/cloudkms.cryptoKeyDecrypter"

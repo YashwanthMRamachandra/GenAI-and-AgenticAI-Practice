@@ -2,7 +2,7 @@ import base64
 import pandas as pd
 from google.cloud import dlp_v2
 
-PROJECT_ID = "gen-lang-client-0609077635"
+PROJECT_ID = "<PROJECT_ID>"
 LOCATION = "global"
 
 KMS_KEY_NAME = f"projects/{PROJECT_ID}/locations/{LOCATION}/keyRings/deid-keyring/cryptoKeys/deid-key"
